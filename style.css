@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(hello.jpg);
+}
+
+.main__section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
+img {
+    width: auto;
+    height: auto;
+    margin-right: 0.5px;
+}
+
+/* gallery */
+
+.section__gallery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    opacity: 0.8;
+}
+
+.section__gallery:hover {
+    opacity: 1;
+    cursor: crosshair;
+}
+
+.gallery {
+    display: flex;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px steelblue solid;
+}
+
+.gallery::-webkit-scrollbar {
+    width: 3px;
+    background-color: silver;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    border-radius: 4px;
+}
+
+.gallery::-webkit-scrollbar-thumb:hover {
+    background: #93a5cf;
+
+}
+
+/* FORM */
+
+.section__form {
+    margin-top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.form__search {
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    width: 80%;
+    padding: 10px;
+    border: 0px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    color: black;
+    font-family: bold;
+}
+
+.form__btn {
+    width: 35%;
+    border: 0px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    cursor: crosshair;
+}
+
+.form__btn:hover {
+    background-color: #93a5cf;
+}
+
+.form__btn:active {
+    top: 1.5px;
+}
+
+/* ALL BTN */
+
+.btn {
+    border: none;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    transition: 0.5 ease;
+    cursor: crosshair;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 20px 1px steelblue;
+}
+
+.btn:active {
+    top: 1.5px;
+}
+
+/* ALL BTN ARROW*/
+
+.arrow {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-top: 4px solid steelblue;
+    border-left: 4px solid steelblue;
+    transform: rotate(45deg);
+}
+
+.arrow-left {
+    transform: rotate(-45deg);
+    left: 19px;
+    top: 18px;
+}
+
+.arrow-right {
+    transform: rotate(135deg);
+    left: 12px;
+    top: 18px;
+}
+
+
+.div__btn-right {
+    float: right;
+    margin-right: 50px;
+}
+
+.div__btn-left {
+    margin-left: 50px;
+}
+
+/*  WITH */
+
+@media (max-width: 769px) {
+
+    .gallery {
+        width: 400px;
+    }
+
+    .section__form {
+        /* margin-top: 300px; */
+        width: 400px;
+    }
+
+    .div__btn-right {
+        margin-right: 50px;
+    }
+
+    .div__btn-left {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 481px) {
+
+    .gallery {
+        width: 250px;
+    }
+
+    .section__form {
+        width: 300px;
+    }
+
+    .div__btn-right {
+        margin-right: 50px;
+    }
+
+    .div__btn-left {
+        margin-left: 50px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .gallery {
+        width: 200px;
+    }
+
+    .section__form {
+        width: 200px;
+    }
+
+    .div__btn-right {
+        margin-right: 30px;
+    }
+
+    .div__btn-left {
+        margin-left: 30px;
+    }
+
+}
+
+/*  height */
+@media (max-height: 768px) {
+    .section__form {
+        margin-top: 250px;
+    }
+}
+
+@media (max-height: 480px) {
+    .section__form {
+        margin-top: 10px;
+    }
+
+}
+
+@media (min-height: 1024px) {
+    .section__form {
+        margin-top: 650px;
+    }
+}
+
+/* 320px - 480px   : dispositivos moviles.
+481px - 768px   : IPads, Tabletas.
+769px - 1024px  : Pantallas pequenas, portatiles
+1025px - 1200px : Escriorios, pantallas grandes 
+1201px y more   : Pantallas extragrandes, TV */

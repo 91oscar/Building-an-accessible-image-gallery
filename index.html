@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="accessible image gallery">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Building an accessible image gallery</title>
+</head>
+
+<body>
+    <main>
+        <section class="main__section">
+            <section class="section__gallery">
+                <div id="gallery" class="gallery"></div>
+            </section>
+        </section>
+
+        <div class="div__btn-right">
+            <button id="btn-right" class="btn main__btn" aria-label="right button">
+                <div class="arrow arrow-right"></div>
+            </button>
+        </div>
+
+        <div class="div__btn-left">
+            <button id="btn-left" class="btn main__btn" aria-label="left button">
+                <div class="arrow arrow-left"></div>
+            </button>
+        </div>
+
+        <form id="form" class="section__form">
+            <input id="info" class="form__search" type="text" name="search"
+                placeholder="What is your favorite image?" />
+            <button class="form__btn" id="Search" type="submit">Search</button>
+        </form>
+    </main>
+</body>
+
+</html>
